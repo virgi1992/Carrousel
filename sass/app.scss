@@ -1,0 +1,59 @@
+//creando mi propio mixin
+
+@mixin magic($radius, $eje) {
+  border-radius: $radius;
+  background: #e0e0e0;
+  box-shadow: $eje $eje ($eje * 2) #bebebe, (-$eje) (-$eje) ($eje * 2) #fff;
+}
+
+.carousel {
+  @include magic(50px, 21px);
+  width: 90%;
+  max-width: 120em;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.carousel .grande {
+  width: 420%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 2em;
+  transition: all 0.5s ease;
+  transform: translateX(0);
+  @include magic(50px, 21px);
+}
+
+.carousel .img {
+  width: calc(90% / 4);
+  min-height: 10vh;
+  height: 88.5em;
+  margin: 2em;
+  @include magic(50px, 21px);
+}
+
+.carousel .puntos {
+  margin: 1em 0 0;
+  width: 100%;
+  padding: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.carousel .punto {
+  width: 1em;
+  height: 1em;
+  padding: 1em;
+  margin: 2em;
+  list-style-type: none;
+  @include magic(50px, 21px);
+}
+
+.carousel .punto.activo {
+  background-color: rgb(17, 182, 211);
+}

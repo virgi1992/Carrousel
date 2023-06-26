@@ -1,0 +1,68 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 21px 21px 42px #bebebe, -21px -21px 42px #fff;
+  width: 90%;
+  max-width: 120em;
+  padding: 2em;
+  overflow: hidden;
+}
+
+.carousel .grande {
+  width: 420%;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 2em;
+  transition: all 0.5s ease;
+  transform: translateX(0);
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 21px 21px 42px #bebebe, -21px -21px 42px #fff;
+}
+
+.carousel .img {
+  width: 22.5%;
+  min-height: 10vh;
+  height: 88.5em;
+  margin: 2em;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 21px 21px 42px #bebebe, -21px -21px 42px #fff;
+}
+
+.carousel .puntos {
+  margin: 1em 0 0;
+  width: 100%;
+  padding: 0.4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.carousel .punto {
+  width: 1em;
+  height: 1em;
+  padding: 1em;
+  margin: 2em;
+  list-style-type: none;
+  border-radius: 50px;
+  background: #e0e0e0;
+  box-shadow: 21px 21px 42px #bebebe, -21px -21px 42px #fff;
+}
+
+.carousel .punto.activo {
+  background-color: rgb(17, 182, 211);
+}
+
+/*# sourceMappingURL=style.css.map */
